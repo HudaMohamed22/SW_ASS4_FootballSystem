@@ -1,26 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ass4_code;
 
 import java.util.*;
 //import java.util.ArrayList;
 
-/**
- *
- * @author Hoda
+/
+ * @author Huda,Samah,Aya
+ * @Version 1.0
+ * @since 12 june 2021
  */
-
     
     public class system {
-     String Name ;
+     String Name;
      ArrayList<Playground> playgrounds;
      ArrayList<User> users;
      BookingPlayground bookPlayground;
     
-     /**
+     /
       * default constructor
       */
      public system() {
@@ -28,7 +23,7 @@ import java.util.*;
         users = new ArrayList<>(); 
         bookPlayground= new BookingPlayground();
     }
-    /**
+    /
       * parameterized constructor to set System name 
       */
     public system(String Name) {
@@ -37,14 +32,14 @@ import java.util.*;
         users = new ArrayList<>(); 
         bookPlayground= new BookingPlayground();
     }
-    /**
+    /
      * get Name of system 
      * @return Name of system 
      */
     public String getName() {
         return Name;
     }
-    /**
+    /
      * set Name of system 
      * @param Name of system 
      */
@@ -53,7 +48,7 @@ import java.util.*;
     }
     
     
-    /**
+    /
      * sign up new user
      * @return User who sign UP
      */
@@ -103,7 +98,7 @@ import java.util.*;
            
         
     }
-    /**
+    /
      * to signIn exist user
      * @param email of user
      * @param password of user
@@ -124,7 +119,7 @@ import java.util.*;
         return user;
     }
     
-     /**
+     /
       * add playground to system 
       * @param playground 
       */
@@ -143,4 +138,3 @@ import java.util.*;
      
      
 }
-
