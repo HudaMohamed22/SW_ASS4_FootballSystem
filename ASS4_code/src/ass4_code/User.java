@@ -1,6 +1,6 @@
 package ass4_code;
 
-/
+/**
  * @author Huda,Samah,Aya
  * @Version 1.0
  * @since 12 june 2021
@@ -15,7 +15,7 @@ public class User {
     protected String phone;
     protected String defaultlocation;
     //protected Ewallet ewallet;
-    /
+    /**
      * default constructor
      */
     public User(){
@@ -23,20 +23,20 @@ public class User {
 
     }
 
-    /
+    /**
      *
-      * @param n name of user
-     * @param p password of user
-     * @param E email of user
-     * @param T phone of user
-     * @param L default of location of play ground
+     * @param _name name of user
+     * @param _password password of user
+     * @param _email email of user
+     * @param _phone phone of user
+     * @param _deflocation default of location of play ground
      */
-    public User(String n, String p, String E, String T, String L ) {
-        name=n;
-        password=p;
-        email=E;
-        phone=T;
-        defaultlocation=L;
+    public User(String _name, String _password, String _email, String _phone, String _deflocation ) {
+        name=_name;
+        password=_password;
+        email=_email;
+        phone=_phone;
+        defaultlocation=_deflocation;
 
     }
 
@@ -44,7 +44,7 @@ public class User {
         ID++;
     }
 
-    /
+    /**
      *
      * @param name
      */
@@ -52,7 +52,7 @@ public class User {
         this.name = name;
     }
 
-    /
+    /**
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class User {
         return name;
     }
 
-    /
+    /**
      *
      * @param ID
      */
@@ -68,7 +68,7 @@ public class User {
         this.ID = ID;
     }
 
-    /
+    /**
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class User {
         return ID;
     }
 
-    /
+    /**
      *
      * @param password
      */
@@ -84,7 +84,7 @@ public class User {
         this.password = password;
     }
 
-    /
+    /**
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class User {
         return password;
     }
 
-    /
+    /**
      *
      * @param email
      */
@@ -100,7 +100,7 @@ public class User {
         this.email = email;
     }
 
-    /
+    /**
      *
      * @return email
      */
@@ -108,7 +108,7 @@ public class User {
         return email;
     }
 
-    /
+    /**
      *
      * @param phone
      */
@@ -117,7 +117,7 @@ public class User {
         this.phone = phone;
     }
 
-    /
+    /**
      *
      * @return phone
      */
@@ -125,7 +125,7 @@ public class User {
         return phone;
     }
 
-    /
+    /**
      *
      * @param defaultlocation
      */
