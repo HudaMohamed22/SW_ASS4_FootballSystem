@@ -1,140 +1,145 @@
 package ass4_code;
 
-import java.util.*;
-//import java.util.ArrayList;
-
 /
  * @author Huda,Samah,Aya
  * @Version 1.0
  * @since 12 june 2021
  */
-    
-    public class system {
-     String Name;
-     ArrayList<Playground> playgrounds;
-     ArrayList<User> users;
-     BookingPlayground bookPlayground;
-    
-     /
-      * default constructor
-      */
-     public system() {
-        playgrounds = new ArrayList<>();
-        users = new ArrayList<>(); 
-        bookPlayground= new BookingPlayground();
-    }
+import java.util.Scanner;
+
+public class User {
+    protected String name;
+    protected static int ID;
+    protected String password;
+    protected String email;
+    protected String phone;
+    protected String defaultlocation;
+    //protected Ewallet ewallet;
     /
-      * parameterized constructor to set System name 
-      */
-    public system(String Name) {
-        this.Name=Name;
-        playgrounds = new ArrayList<>();
-        users = new ArrayList<>(); 
-        bookPlayground= new BookingPlayground();
+     * default constructor
+     */
+    public User(){
+
+
     }
+
     /
-     * get Name of system 
-     * @return Name of system 
+     *
+      * @param n name of user
+     * @param p password of user
+     * @param E email of user
+     * @param T phone of user
+     * @param L default of location of play ground
+     */
+    public User(String n, String p, String E, String T, String L ) {
+        name=n;
+        password=p;
+        email=E;
+        phone=T;
+        defaultlocation=L;
+
+    }
+
+    public void  increamentId(){
+        ID++;
+    }
+
+    /
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /
+     *
+     * @return
      */
     public String getName() {
-        return Name;
+        return name;
     }
+
     /
-     * set Name of system 
-     * @param Name of system 
+     *
+     * @param ID
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setID(int ID) {
+        this.ID = ID;
     }
-    
-    
+
     /
-     * sign up new user
-     * @return User who sign UP
+     *
+     * @return
      */
-    public User  signUP(){
-        User user=null;
-        Scanner input = new Scanner(System.in);
-        Scanner input2 = new Scanner(System.in);
-        int choose;
-        
-        while(true)
-        {
-            System.out.println("Press 1 if Player\n"
-                             + "      2 if Playground Owner");
-            choose=input.nextInt();
-            if(choose==1)
-            {
-                user=new User();
-                
-                break;
-            }
-            else if(choose==2)
-            {
-                user=new PlaygroundOwner();
-                
-                break;
-            }
-            else
-            { 
-                System.out.println("Please Enter valid input");
-            }
-        }
-       
-        System.out.print("Please Enter User's data\n"
-                           + "Name : ");
-            user.setName(input2.nextLine());
-            System.out.print("User Email : ");
-            user.setEmail(input2.nextLine());
-            System.out.print("User Password : ");
-            user.setPassword(input2.nextLine());
-            System.out.print("User Phone Number : ");
-            user.setPhone(input2.nextLine());
-            System.out.print("Address : ");
-            user.setDefaultlocation(input2.nextLine());
-            user.increamentId();
-            users.add(user);
-            return user;
-           
-        
+    public int getID() {
+        return ID;
     }
+
     /
-     * to signIn exist user
-     * @param email of user
-     * @param password of user
-     * @return User who sign In
+     *
+     * @param password
      */
-    public User signIn(String email,String password){
-         User user=null;
-         int flag=0;
-        for(int i=0;i<users.size();i++){
-            if(users.get(i).email.equals(email) && users.get(i).password.equals(password) ){
-                user=users.get(i);
-                System.out.print("successfully signin\n");
-                flag=1;
-                break;
-            }
-        }
-        if (users.size()==0 || flag==0){System.out.print(" NO Users Found\n");}
-        return user;
+    public void setPassword(String password) {
+        this.password = password;
     }
-    
-     /
-      * add playground to system 
-      * @param playground 
-      */
-     public void addPlayground(Playground playground){
-         playgrounds.add(playground);
-         
-     }
-     /**
-      * book Playground
-      * @param location 
-      */
-      public void bookPlayground(String location){
-         bookPlayground.Booking(playgrounds,location);
-         
-     }
-     
-     
+
+    /
+     *
+     * @return
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /
+     *
+     * @param email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /
+     *
+     * @return email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /
+     *
+     * @param phone
+     */
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    /
+     *
+     * @return phone
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /
+     *
+     * @param defaultlocation
+     */
+
+    public void setDefaultlocation(String defaultlocation) {
+        this.defaultlocation = defaultlocation;
+    }
+
+    /**
+     *
+     * @return default of location
+     */
+    public String getDefaultlocation() {
+        return defaultlocation;
+    }
+
 }
