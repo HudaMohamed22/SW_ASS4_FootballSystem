@@ -1,7 +1,8 @@
+package ass4_code;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/
+/**
  * @author Huda,Samah,Aya
  * @Version 1.0
  * @since 12 june 2021
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class PlaygroundOwner extends User {
     ArrayList<Playground> myPlaygrounds;
     
-    /
+    /**
      * default constructor
      */
     public PlaygroundOwner(){
@@ -17,7 +18,7 @@ public class PlaygroundOwner extends User {
     }
 
    
-    /
+    /**
      * registerPlayground
      * @return registered Playground
      */
@@ -58,7 +59,7 @@ public class PlaygroundOwner extends User {
         return playground;
     
     }
-    /
+    /**
      * display Owner playground
      */
     public void checkPlaygrounds(){
