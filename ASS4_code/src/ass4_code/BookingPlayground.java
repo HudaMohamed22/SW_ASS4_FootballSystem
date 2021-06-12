@@ -29,12 +29,9 @@ public class BookingPlayground {
     {
         System.out.println("playground number : "+i);
         System.out.println("playground name : "+myPlayground.getName());
-        //System.out.println("ActivateState"+myPlayground.isActivateState());
         System.out.println("playground size : "+myPlayground.getSize());
         System.out.println(" playground location : "+myPlayground.getLocation());
         System.out.println("playground price per hour : "+myPlayground.getPriceperhour());
-       // System.out.println("BookedSlots : "+myPlayground.getBookedSlots());
-       // System.out.println("playground cancellation period : "+myPlayground.getCancellationperiod());
         System.out.print("playground Available hours : ");
         for (int j=0 ; j<myPlayground.getavailablehours().size() ;j++){
             System.out.print(myPlayground.getavailablehours().get(j)+"  ");
@@ -71,7 +68,6 @@ public class BookingPlayground {
         //System.out.println("arrPlayground.size"+arrPlayground.size());
        for(int i=0 ;i<arrPlayground.size();i++)
        {
-          // System.out.println("arrPlayground.get(i).getLocation()"+arrPlayground.get(i).getLocation());
            if(loc.equals(arrPlayground.get(i).getLocation()))
            {
                index.add(i);
@@ -114,11 +110,6 @@ public class BookingPlayground {
            }
            else if(checkisValidHour(arrPlayground.get(choose_index),hour))
            {
-               
-               
-               //System.out.println("thanks god");
-               //display(choose_index, arrPlayground.get(choose_index));
-              // arrPlayground.get(choose_index).setavailablehours=0;
                hours.add(hour);
            }
            else System.out.println("It's already Booked");
