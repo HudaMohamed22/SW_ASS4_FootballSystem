@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ass4_code;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Hoda
+/
+ * @author Huda,Samah,Aya
+ * @Version 1.0
+ * @since 12 june 2021
  */
 public class PlaygroundOwner extends User {
     ArrayList<Playground> myPlaygrounds;
     
-    /**
+    /
      * default constructor
      */
     public PlaygroundOwner(){
@@ -23,7 +17,7 @@ public class PlaygroundOwner extends User {
     }
 
    
-    /**
+    /
      * registerPlayground
      * @return registered Playground
      */
@@ -64,7 +58,7 @@ public class PlaygroundOwner extends User {
         return playground;
     
     }
-    /**
+    /
      * display Owner playground
      */
     public void checkPlaygrounds(){
@@ -81,4 +75,5 @@ public class PlaygroundOwner extends User {
                 
         }
     }
+}
 }
