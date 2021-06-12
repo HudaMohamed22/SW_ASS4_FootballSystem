@@ -126,7 +126,7 @@ private Float cancellationperiod  ;
     }
 
     /**
-     *seeter
+     *setter
      * @param privateavailablehours
      */
     public void setavailablehours(ArrayList<Integer> privateavailablehours) {
