@@ -15,7 +15,7 @@ public class User {
     protected String phone;
     protected String defaultlocation;
     //protected Ewallet ewallet;
-    /
+    /**
      * default constructor
      */
     public User(){
